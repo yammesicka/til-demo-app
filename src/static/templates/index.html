@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <script src="{{ url_for('static', filename='tailwind.js') }}"></script>
+</head>
+<body>
+  <div class="flex min-h-screen w-full flex-col bg-gray-100 dark:bg-gray-950">
+    <header class="sticky top-0 z-10 border-b bg-gray-100 px-4 py-3 dark:border-gray-800 dark:bg-gray-950 md:px-6 lg:px-8">
+      <div class="container mx-auto flex items-center justify-between">
+        <a class="flex items-center gap-2 font-semibold" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          >
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+          </svg>
+          <span class="font-serif">Today I Learned</span>
+        </a>
+        <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          >
+            <path d="M5 12h14"></path>
+            <path d="M12 5v14"></path>
+          </svg>
+          <span class="sr-only">Add New</span>
+        </button>
+      </div>
+    </header>
+    <main class="flex-1 px-4 py-8 md:px-6 lg:px-8">
+      <div class="container mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[1fr_300px]">
+        <div class="rounded-lg border bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <div class="mb-6 flex items-center justify-between">
+            <h1 class="text-2xl font-bold font-serif">Today's Learnings</h1>
+            <form>
+              <textarea
+                class="flex min-h-[80px] w-full text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-h-24 resize-none rounded-md border border-gray-300 bg-white p-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+                placeholder="Add a new learning..."
+              ></textarea>
+            </form>
+          </div>
+          <div class="space-y-4">
+            <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+              <div class="rounded-full bg-[#55efc4] p-2 text-2xl">🧠</div>
+              <div>
+                <h3 class="font-medium font-serif">Learned about Tailwind CSS</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Discovered the power of utility-first CSS and how it can streamline my development workflow.
+                </p>
+              </div>
+              <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  <polyline points="18 8 22 12 18 16"></polyline>
+                  <polyline points="6 8 2 12 6 16"></polyline>
+                  <line x1="2" x2="22" y1="12" y2="12"></line>
+                </svg>
+                <span class="sr-only">More</span>
+              </button>
+            </div>
+            <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+              <div class="rounded-full bg-[#ffeaa7] p-2 text-2xl">🔍</div>
+              <div>
+                <h3 class="font-medium font-serif">Learned about React Hooks</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Explored the different React Hooks and how they can simplify state management in my components. how
+                  they can
+                </p>
+              </div>
+              <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  <polyline points="18 8 22 12 18 16"></polyline>
+                  <polyline points="6 8 2 12 6 16"></polyline>
+                  <line x1="2" x2="22" y1="12" y2="12"></line>
+                </svg>
+                <span class="sr-only">More</span>
+              </button>
+            </div>
+            <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+              <div class="rounded-full bg-[#fdcb6e] p-2 text-2xl">🚀</div>
+              <div>
+                <h3 class="font-medium font-serif">Learned about Vercel deployment</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Discovered how to deploy my React applications to Vercel with ease and take advantage of their
+                  powerful features.
+                </p>
+              </div>
+              <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  <polyline points="18 8 22 12 18 16"></polyline>
+                  <polyline points="6 8 2 12 6 16"></polyline>
+                  <line x1="2" x2="22" y1="12" y2="12"></line>
+                </svg>
+                <span class="sr-only">More</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <h2 class="mb-4 text-xl font-bold font-serif">Past Learnings</h2>
+          <div class="space-y-4">
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1b:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium font-serif">June 16, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1b:" hidden="" style=""></div>
+            </div>
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1c:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium font-serif">June 15, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1c:" hidden="" style=""></div>
+            </div>
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1d:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium font-serif">June 14, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1d:" hidden="" style=""></div>
+            </div>
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1e:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium font-serif">June 13, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1e:" hidden="" style=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex w-full shrink-0 items-center justify-center border-t bg-gray-100 px-4 py-3 dark:border-gray-800 dark:bg-gray-950 md:px-6 lg:px-8">
+      <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full"></button>
+    </footer>
+  </div>
+</body>
+</html>

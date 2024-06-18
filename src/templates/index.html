@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="{{ url_for('static', filename='tailwind.js') }}"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+</head>
+<body>
+  <div class="flex min-h-screen w-full flex-col bg-gray-100 dark:bg-gray-900">
+    {% include "header.html" %}
+    <main class="flex-1 px-4 py-10 md:px-6 lg:px-8 font-['Roboto',_'sans-serif']">
+      <div class="container mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[1fr_300px]">
+        <section class="rounded-lg border bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <div class="flex items-center justify-between">
+            <h1 class="text-2xl font-bold mb-4">Today's Learnings</h1>
+          </div>
+          <div class="flex items-center gap-2">
+              {% include "send_form.html" %}
+          </div>
+          <article id="idea-list" class="space-y-4 mt-9">
+              {% for idea in ideas %}
+                {% include "idea.html" %}
+              {% endfor %}
+          </article>
+        </section>
+        <aside class="rounded-lg border bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <h2 class="mb-4 text-xl font-bold ">Past Learnings</h2>
+          <div class="space-y-4">
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1b:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium ">June 16, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1b:" hidden="" style=""></div>
+            </div>
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1c:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium ">June 15, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1c:" hidden="" style=""></div>
+            </div>
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1d:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium ">June 14, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1d:" hidden="" style=""></div>
+            </div>
+            <div data-state="closed" class="rounded-lg border bg-gray-100 p-4 dark:border-gray-800 dark:bg-gray-800">
+              <button
+                type="button"
+                aria-controls="radix-:r1e:"
+                aria-expanded="false"
+                data-state="closed"
+                class="flex items-center justify-between"
+              >
+                <div class="font-medium ">June 13, 2023</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5 transition-transform [&amp;[data-state=open]]:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div data-state="closed" id="radix-:r1e:" hidden="" style=""></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    {% include "footer.html" %}
+  </div>
+</body>
+</html>
